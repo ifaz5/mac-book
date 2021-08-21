@@ -10,7 +10,6 @@ let memoryField = document.getElementById('extra-memory-cost');
 memoryField = document.getElementById('extra-memory-cost');
 let chargeField = document.getElementById('extra-storage-charge');
 chargeField = document.getElementById('extra-storage-charge');
-chargeField = document.getElementById('extra-storage-charge');
 
 
 let deliveryField = document.getElementById('delivery-charge');
@@ -18,7 +17,6 @@ deliveryField = document.getElementById('delivery-charge');
 
 const total = document.getElementById('total')
 
-// const result = document.getElementById('result')
 
 free.addEventListener('click', function () {
     memoryField.innerText = '180';
@@ -54,18 +52,17 @@ primeDelivery.addEventListener('click', function () {
     updateTotal()
 })
 
-
+// update total
 function updateTotal() {
     const defaultPrice = 1299;
     const memoryF = parseFloat(memoryField.innerText);
     const charge = parseFloat(chargeField.innerText);
     const deliveryF = parseFloat(deliveryField.innerText);
     const grandTotal = (memoryF + charge + deliveryF);
-    // result.innerText = grandTotal + defaultPrice;
     total.innerText = grandTotal + defaultPrice;
 
 }
-
+// coupon button function working coupon code
 document.getElementById('cupon-btn').addEventListener('click', function () {
     const Input = document.getElementById('cupon-id');
     const grand = Input.value;
